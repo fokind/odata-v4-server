@@ -395,7 +395,7 @@ class ODataStreamWrapper extends Transform {
         if (typeof done == "function") done();
     }
 
-    protected _flush(done?: Function) {
+    public _flush(done?: Function) {
         if (typeof done == "function") done();
     }
 
@@ -594,7 +594,7 @@ export class ODataProcessor extends Transform {
         }
     }
 
-    protected _flush(done?: Function) {
+    public _flush(done?: Function) {
         if (this.streamEnabled && this.streamObject) {
             if (this.options.objectMode) {
                 let flushObject: any = {
